@@ -10,6 +10,9 @@ set -a
 . ./devcontainer-features.env
 set +a
 
+echo "echoing secret..."
+echo ${
+}
 
 if [ ! -z ${_BUILD_ARG_HELLOWORLD} ]; then
     echo "Activating feature 'helloworld'"
@@ -23,6 +26,7 @@ if [ ! -z ${_BUILD_ARG_HELLOWORLD} ]; then
     RED='\033[0;91m'
     NC='\033[0m' # No Color
     echo -e "\${RED}${GREETING}, \$(whoami)!"
+    echo -e "\${RED}Codespace Secret: ${JOSH_CODESPACE_SECRET}"
     echo -e "\${NC}"
 EOF
 
