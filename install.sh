@@ -11,8 +11,8 @@ set -a
 set +a
 
 echo "echoing secret..."
-echo ${
-}
+echo $JOSH_CODESPACE_SECRET
+echo "done..."
 
 if [ ! -z ${_BUILD_ARG_HELLOWORLD} ]; then
     echo "Activating feature 'helloworld'"
